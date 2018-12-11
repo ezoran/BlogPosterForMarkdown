@@ -9,7 +9,7 @@ import shutil
 
 postTitle = "Default Post Title"
 postEntry = "Default Post Text"
-postPath = "Select a path"
+postPath = os.getcwd() + "/source/pages/" #default path for website
 
 #---USER INTERFACE
 master = Tk()
@@ -48,9 +48,10 @@ def printEntry():
     print(postEntry)
 
 def look_for_newlines():
+    print("begin looking for new lines")
     for line in postEntry:
         if(line == "\n"):
-            line += "'<br>'"
+            print("new line found")
 
 
 my_filetypes = [('all files', '.*'), ('text files', '.txt')]
